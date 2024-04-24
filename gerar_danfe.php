@@ -1,8 +1,8 @@
 <?php 
     require_once "../vendor/autoload.php";
-    use Dompdf\Dompdf;
+    use Dompdf\Dompdf;  // composer do DOMPDF
 	use Dompdf\Options;
-	use Picqer\Barcode\BarcodeGeneratorPNG;
+	use Picqer\Barcode\BarcodeGeneratorPNG; // composer do Barcode
     $generator = new BarcodeGeneratorPNG();
 
 	$options = new Options();
@@ -16,22 +16,17 @@
 	$options->set('margin_bottom', 2);
 	$dompdf = new Dompdf($options);
 
-        $xml = '43240494311032000151550010000060501442241430';
+	// chave nota aqui ----------
+        $xml = '0000000000000000000000000000000000000000';
         $empresa = substr($xml, 6, 14);
-        $empresaAtual = 'RENOVABE';
+        $empresaAtual = 'empresa';
 
         $arrayCredenciaisK = array(
-            'RENOVABE' => '3492186174477',
-            '100PESO' => '2169081830916',
-            'NEWHAIR' => '2169120164211',
-            'NEWWHITE' => '2169058830939'
+            'empresa' => 'TOKENOMIE_KEY',
         );
 
         $arrayCredenciaisS = array(
-            'RENOVABE' => 'a3f69e7f7a09674dc708c026409dc110',
-            '100PESO' => '46b80cb6e3df2d6dfacc7a6f69b30ae5',
-            'NEWHAIR' => 'ee64ce2eed900259ec4a83fb6b7903cf',
-            'NEWWHITE' => '2b02b8320a21e82f6c4afc1edaa76db8'
+            'empresa' => 'TOKENDAOMIE_SECRET',
         );
 
 
