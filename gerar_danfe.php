@@ -152,7 +152,7 @@
 		$vita_ie = (isset($vita['inscricao_estadual'] ) ? $vita['inscricao_estadual'] : '');
 		$tpNF = (strstr(strtoupper($naturezaOp), 'VENDA') ? 1 : 0);
 
-		echo $tpNF; die;
+		
 		function formataTelefone($numero){
 			if(strlen($numero) == 10){
 				$novo = substr_replace($numero, '(', 0, 0);
