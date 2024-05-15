@@ -82,7 +82,7 @@
             'app_key' => $arrayCredenciaisK[$empresaAtual],
             'app_secret' => $arrayCredenciaisS[$empresaAtual],
             'param' => array(
-                array('codigo_empresa' => '8915906258'),
+                array('codigo_empresa' => '123456789'),
             ),
         );
         $options3 = array(
